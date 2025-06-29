@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "cml": {
+      "command": "uv",
+      "args": ["run", "/absolute/path/to/cml_mcp_server/cml_server.py"],
+      "env": {
+        "CLOUDERA_ML_HOST": "https://your-cml-instance.cloudera.com",
+        "CLOUDERA_ML_API_KEY": "your-api-key-here"
+      }
+    }
+  }
+} 

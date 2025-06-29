@@ -1,0 +1,58 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "cml-mcp-server"
+version = "0.1.0"
+description = "MCP server for Cloudera Machine Learning"
+readme = "README.md"
+authors = [
+    {name = "CML MCP Server Team"}
+]
+requires-python = ">=3.8"
+license = {text = "MIT"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+dependencies = [
+    "mcp[cli]>=1.2.0",
+    "requests>=2.31.0",
+    "python-dotenv>=1.0.0",
+    "certifi>=2022.12.7",
+]
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "isort",
+    "mypy",
+    "pytest",
+]
+
+[project.urls]
+"Homepage" = "https://github.com/yourusername/cml-mcp-server"
+"Bug Tracker" = "https://github.com/yourusername/cml-mcp-server/issues"
+
+[tool.black]
+line-length = 100
+target-version = ["py38", "py39", "py310"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.mypy]
+python_version = "3.8"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+disallow_incomplete_defs = true
+
+[project.scripts]
+cml-mcp-server = "cml_mcp_server.cml_server:main" 

@@ -150,3 +150,4 @@ The server provides the following MCP tools for interacting with CML:
 ### Runtime Management
 - `list_runtime_addons`: List all available runtime addons (e.g., Spark3, GPU)
 - `download_ssl_cert`: Download the SSL certificate from the CML server
+
